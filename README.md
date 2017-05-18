@@ -5,8 +5,6 @@
 Sending a mail with CSS for is currently a surprisingly large hassle.
 This library aims to make it a breeze in the Django template language.
 
-Credits: https://github.com/roverdotcom/django-inlinecss
-The repo is a fork as they are no longer active.
 
 ## Usage
 
@@ -64,6 +62,7 @@ INSTALLED_APPS = (
 ```
 
 ## Acknowledgements
+Thanks to Jeremy Nauta, Philip Kimmey and Keith for [django-inlinecss](https://github.com/roverdotcom/django-inlinecss)
 
 Thanks to Tanner Netterville for his efforts on [Pynliner](https://github.com/rennat/pynliner).
 

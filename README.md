@@ -1,12 +1,12 @@
 [![Build Status](https://travis-ci.org/wejhink/django-mailcss.png?branch=master)](https://travis-ci.org/wejhink/django-mailcss)
 
+
 ## About
+Sending a mail with CSS for is currently a surprisingly large hassle.
+This library aims to make it a breeze in the Django template language.
 
-Inlining CSS is necessary for email generation and sending
-but is currently a surprisingly large hassle.
-
-This library aims to make it a breeze in the Django
-template language.
+Credits: https://github.com/roverdotcom/django-inlinecss
+The repo is a fork as they are no longer active.
 
 ## Usage
 

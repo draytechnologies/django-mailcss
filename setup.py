@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='django-mailcss',
-    version="0.1.2",
+    version="0.1.0",
     description='A Django app useful for inlining CSS (primarily for e-mails)',
     long_description=open('README.md').read(),
     author='contact@jhink.com',

@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/roverdotcom/django-inlinecss.png?branch=master)](https://travis-ci.org/roverdotcom/django-inlinecss)
+[![Build Status](https://travis-ci.org/wejhink/django-mailcss.png?branch=master)](https://travis-ci.org/wejhink/django-mailcss)
 
 ## About
 
@@ -15,12 +15,12 @@ template language.
 - BeautifulSoup
 - cssutils
 - Python 2.7+,3.4+
-- Django 1.6+
+- Django 1.11+
 
 
-#### Step 2: Install django_inlinecss
+#### Step 2: Install django_mailcss
 
-Add ```django_inlinecss``` to your ```settings.py```:
+Add ```django_mailcss``` to your ```settings.py```:
 
 ```python
 INSTALLED_APPS = (
@@ -30,7 +30,7 @@ INSTALLED_APPS = (
         '...',
         '...',
         '...',
-        'django_inlinecss')
+        'django_mailcss')
 ```
 
 #### Step 3: Use the templatetag
@@ -39,8 +39,8 @@ INSTALLED_APPS = (
 2. Create your template:
 
 ```html
-{% load inlinecss %}
-{% inlinecss "css/extra-padding.css" %}
+{% load mailcss %}
+{% mailcss "css/extra-padding.css" %}
     <html>
         <body>
             <div class='lots-o-padding'>
@@ -48,7 +48,7 @@ INSTALLED_APPS = (
             </div>
         </body>
     </html>
-{% endinlinecss %}
+{% endmailcss %}
 ```
 
 #### Step 4: Prepare to be Wowed

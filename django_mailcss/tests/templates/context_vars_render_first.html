@@ -1,13 +1,13 @@
-{% load inlinecss %}
-{% inlinecss "foo.css" "bar.css" %}
+{% load mailcss %}
+{% mailcss "foobar.css" %}
 <html>
     <body>
-        <div class="foo">
+        {{ foo_div_open_tag }}
             This is the "foo" div.
         </div>
-        <div class="bar">
+        {{ bar_div_open_tag }}
             This is the "bar" div.
         </div>
     </body>
 </html>
-{% endinlinecss %}
+{% endmailcss %}

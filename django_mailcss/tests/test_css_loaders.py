@@ -8,8 +8,8 @@ from django.test.utils import override_settings
 
 from mock import patch
 
-from django_inlinecss.tests.constants import TESTS_STATIC_DIR
-from django_inlinecss.css_loaders import StaticFinderCSSLoader, StaticPathCSSLoader
+from django_mailcss.tests.constants import TESTS_STATIC_DIR
+from django_mailcss.css_loaders import StaticFinderCSSLoader, StaticPathCSSLoader
 
 
 @override_settings(STATIC_ROOT=TESTS_STATIC_DIR)

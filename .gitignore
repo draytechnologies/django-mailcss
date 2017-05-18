@@ -4,6 +4,6 @@
 *.swp
 *.swo
 dist/
-django_inlinecss.egg-info/
+django_mailcss.egg-info/
 venv/
 build/

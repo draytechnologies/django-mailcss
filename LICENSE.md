@@ -1,4 +1,4 @@
-## django-inlinecss
+## django-mailcss
 
 Copyright (c) 2012 Philip Kimmey & Thomas Yip
 

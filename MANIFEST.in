@@ -1,2 +1,2 @@
 include README.md
-recursive-include django_inlinecss *.py
+recursive-include django_mailcss *.py

@@ -3,7 +3,7 @@ try:
 except ImportError:
     from django.utils import importlib
 
-DEFAULT_ENGINE = 'django_inlinecss.engines.PynlinerEngine'
+DEFAULT_ENGINE = 'django_mailcss.engines.PynlinerEngine'
 
 
 def load_class_by_path(path):
@@ -15,7 +15,7 @@ def load_class_by_path(path):
 
 def get_engine():
     from django.conf import settings
-    engine_path = getattr(settings, 'INLINECSS_ENGINE', DEFAULT_ENGINE)
+    engine_path = getattr(settings, 'MAILCSS_ENGINE', DEFAULT_ENGINE)
     return load_class_by_path(engine_path)
 
 
@@ -23,9 +23,9 @@ def get_css_loader():
     from django.conf import settings
 
     if settings.DEBUG:
-        default_css_loader = 'django_inlinecss.css_loaders.StaticFinderCSSLoader'
+        default_css_loader = 'django_mailcss.css_loaders.StaticFinderCSSLoader'
     else:
-        default_css_loader = 'django_inlinecss.css_loaders.StaticPathCSSLoader'
+        default_css_loader = 'django_mailcss.css_loaders.StaticPathCSSLoader'
 
-    engine_path = getattr(settings, 'INLINECSS_CSS_LOADER', default_css_loader)
+    engine_path = getattr(settings, 'MAILCSS_CSS_LOADER', default_css_loader)
     return load_class_by_path(engine_path)

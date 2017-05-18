@@ -5,12 +5,12 @@ from django.contrib.staticfiles import finders
 from django.contrib.staticfiles.storage import staticfiles_storage
 from django.conf import settings
 
-from django_inlinecss import conf
+from django_mailcss import conf
 
 register = template.Library()
 
 
-class InlineCssNode(template.Node):
+class MailCssNode(template.Node):
     def __init__(self, nodelist, filter_expressions):
         self.nodelist = nodelist
         self.filter_expressions = filter_expressions
@@ -31,14 +31,14 @@ class InlineCssNode(template.Node):
 
 
 @register.tag
-def inlinecss(parser, token):
-    nodelist = parser.parse(('endinlinecss',))
+def mailcss(parser, token):
+    nodelist = parser.parse(('endmailcss',))
 
-    # prevent second parsing of endinlinecss
+    # prevent second parsing of endmailcss
     parser.delete_first_token()
 
     args = token.split_contents()[1:]
 
-    return InlineCssNode(
+    return MailCssNode(
         nodelist,
         [parser.compile_filter(arg) for arg in args])

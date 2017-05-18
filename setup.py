@@ -1,5 +1,7 @@
 from setuptools import setup, find_packages
 
+REQUIREMENTS = [i.strip() for i in open("requirements/requirements-mandatory.txt").readlines()]
+
 setup(
     name='django-mailcss',
     version="0.1.0",
@@ -26,9 +28,5 @@ setup(
         'Topic :: Communications :: Email',
         'Topic :: Text Processing :: Markup :: HTML',
         ],
-    install_requires=[
-        'Django',
-        'pynliner',
-        'mock',
-    ],
+    install_requires=REQUIREMENTS,
 )

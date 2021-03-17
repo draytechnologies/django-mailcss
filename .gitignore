@@ -7,3 +7,4 @@ dist/
 django_mailcss.egg-info/
 venv/
 build/
+.idea

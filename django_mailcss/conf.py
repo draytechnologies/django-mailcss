@@ -3,7 +3,7 @@ try:
 except ImportError:
     from django.utils import importlib
 
-DEFAULT_ENGINE = 'django_mailcss.engines.PynlinerEngine'
+DEFAULT_ENGINE = 'django_mailcss.engines.CSSInlineEngine'
 
 
 def load_class_by_path(path):

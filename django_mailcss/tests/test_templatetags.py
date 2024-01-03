@@ -31,7 +31,7 @@ class MailCssTests(TestCase):
 
     def assert_foo_and_bar_rendered(self, rendered):
         foo_div_regex = (
-            r'<div class="foo" style="margin: 10px 15px 20px 25px">'
+            r'<div class="foo" style="margin: 10px 15px 20px 25px;?">'
             '\s+This is the "foo" div.\s+'
             '<\/div>')
         self.assertRegexpMatches(
@@ -39,7 +39,7 @@ class MailCssTests(TestCase):
             foo_div_regex)
 
         bar_div_regex = (
-            r'<div class="bar" style="padding: 10px 15px 20px 25px">'
+            r'<div class="bar" style="padding: 10px 15px 20px 25px;?">'
             '\s+This is the "bar" div.\s+'
             '<\/div>')
         self.assertRegexpMatches(
@@ -128,7 +128,7 @@ class MailCssTests(TestCase):
             'unicode_string': u'I love playing with my pi\xf1ata'})
         self.assertRegexpMatches(
             rendered,
-            '<div class="bar" style="padding: 10px 15px 20px 25px">')
+            '<div class="bar" style="padding: 10px 15px 20px 25px;?">')
         self.assertRegexpMatches(
             rendered,
             u'I love playing with my pi\xf1ata')

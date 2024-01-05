@@ -1,6 +1,11 @@
 from django import template
 
-from django.utils.encoding import smart_text
+try:
+    from django.utils.encoding import smart_str
+except ImportError:
+    # smart_text was replaced by smart_str in django 3.0+ and removed in django 4.0
+    from django.utils.encoding import smart_text as smart_str
+
 from django.contrib.staticfiles import finders
 from django.contrib.staticfiles.storage import staticfiles_storage
 from django.conf import settings
@@ -21,7 +26,7 @@ class MailCssNode(template.Node):
         for expression in self.filter_expressions:
             path = expression.resolve(context, True)
             if path is not None:
-                path = smart_text(path)
+                path = smart_str(path)
 
             css_loader = conf.get_css_loader()()
             css = ''.join((css, css_loader.load(path)))
